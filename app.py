@@ -3,7 +3,12 @@ from PIL import Image
 import io
 import os
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+import platform
+
+if platform.system() == "Windows":
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+else:
+    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 import tempfile
 import cv2
@@ -235,3 +240,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
