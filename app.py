@@ -199,7 +199,7 @@ def main():
     st.title("Scans and transcribes your documents")
     st.write("Upload an image or PDF. The app will OCR the content, attempt to detect tables and extract them as tables in the Word file. If table detection fails, full-page text will be exported.")
 
-    uploaded_file = = st.file_uploader(
+    uploaded_file = st.file_uploader(
     "📄 Upload image or PDF file",
     type=["pdf", "png", "jpg", "jpeg", "tiff", "tif"],
     accept_multiple_files=False,
@@ -245,6 +245,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
