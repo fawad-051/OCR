@@ -199,8 +199,12 @@ def main():
     st.title("Scans and transcribes your documents")
     st.write("Upload an image or PDF. The app will OCR the content, attempt to detect tables and extract them as tables in the Word file. If table detection fails, full-page text will be exported.")
 
-    uploaded_file = st.file_uploader("Upload image or PDF", type=['pdf','png','jpg','jpeg','tiff','tif'])
-    lang = st.text_input('Tesseract language (e.g. eng, eng+urd)', value='eng')
+    uploaded_file = uploaded_file = st.file_uploader(
+    "Upload image or PDF", 
+    type=['pdf','png','jpg','jpeg','tiff','tif'], 
+    accept_multiple_files=False,
+    label_visibility="visible"
+)
 
     if uploaded_file is not None:
         with st.spinner('Loading and converting file...'):
@@ -240,4 +244,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
