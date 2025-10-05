@@ -161,7 +161,7 @@ def main():
     st.set_page_config(page_title="OCR → Word Converter", layout="centered")
     st.title("📄Scans and transcribes your documents")
     st.write("Upload an image or PDF. The app will OCR the content, detect tables, and export to Word format.")
-     st.title("Prepared By: Dr Fawad Hussain Paul")
+    st.write("Prepared By: Dr Fawad Hussain Paul")
 
     uploaded_file = st.file_uploader(
         "Upload image or PDF",
@@ -211,4 +211,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
